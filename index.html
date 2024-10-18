@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        .form-control {
+            background-color: var(--bs-form-control-disabled-bg);
+            opacity: 1;
+        }
+
+        .card-header {
+            background-color: rgb(22 144 169) !important;
+            font-weight: bold;
+        }
+
+        .required {
+            color: red;
+            font-weight: bold;
+        }
+
+        .fontWg {
+            font-weight: 500;
+        }
+
+        #indexItem {
+            margin-left: 230px;
+        }
+
+     @media (max-width:500px){
+        #indexItem{
+            margin-left: 0px;
+        }
+     }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <!-- Full Form Section -->
+        <div class="card">
+            <div class="card-header text-white">
+                Paper Details
+            </div>
+            <div class="card-body">
+                <form>
+                    <!-- Image 1 Content -->
+                    <div class=" mb-3">
+                        <label class="mb-1 fontWg" for="PaperTitle">Paper Title: <span class="required">*</span></label>
+                        <div>
+                            <textarea class="form-control" placeholder="Enter Paper Title" id="PaperTitle"
+                                class="required" required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="journalName" class="form-label fontWg">Journal Name: <span
+                                class="required">*</span></label>
+                        <div>
+                            <textarea class="form-control" placeholder="Enter Journal Name" id="journalName"
+                                class="required" required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="firstAuthor" class="form-label fontWg">1st Author Name:<span
+                                        class="required">*</span></label>
+                                <input type="text" class="form-control" id="firstAuthor" placeholder="N/A" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="firstAuthorEmail" class="form-label fontWg">1st Author Email:<span
+                                        class="required">*</span></label>
+                                <input type="email" class="form-control" id="firstAuthorEmail" placeholder="N/A"
+                                    required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="honorariumAmount" class="form-label fontWg">Honorarium Amount:<span
+                                        class="required">*</span></label>
+                                <input type="text" class="form-control" id="honorariumAmount" placeholder="N/A"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="secondAuthorEmail" class="form-label fontWg">2nd Author Email:<span
+                                        class="required">*</span></label>
+                                <input type="email" class="form-control" id="secondAuthorEmail"
+                                    placeholder="abc@gmail.com" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="allAuthors" class="form-label fontWg">All Authors:</label>
+                        <input type="text" class="form-control" id="allAuthors" placeholder="Enter all authors">
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="volume" class="form-label fontWg">Volume:<span
+                                        class="required">*</span></label>
+                                <input type="text" class="form-control" id="volume" placeholder="Enter volume number"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="issue" class="form-label fontWg">Issue:</label>
+                                <input type="text" class="form-control" id="issue" placeholder="Enter issue number">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="pageNos" class="form-label fontWg">Page No(s):</label>
+                        <input type="text" class="form-control" id="pageNos" placeholder="Enter page numbers">
+                    </div>
+
+                    <hr class="my-4">
+
+                    <!-- Image 2 Content -->
+                    <div class="mb-3">
+                        <label for="DOI" class="form-label fontWg">DOI of the Article:<span
+                                class="required">*</span></label>
+                        <input type="text" class="form-control" id="DOI" required>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="researchArea" class="form-label fontWg">Research Area:<span
+                                        class="required">*</span></label>
+                                <input type="text" class="form-control" id="researchArea"
+                                    placeholder="Enter Research Area" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="journalType" class="form-label fontWg">Type of Journal:<span
+                                        class="required">*</span></label>
+                                <input type="text" class="form-control" id="journalType"
+                                    placeholder="Enter Journal Type" required>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="mb-3 fontWg">
+                        <span>Select Quartile for Impact Factor Publication:</span>
+
+                        <input type="radio" name="quartileSelection" id="Q1">Quartile 1(Q1) &nbsp;
+                        <input type="radio" name="quartileSelection" id="Q2"> Quartile 2(Q2) &nbsp;
+                        <input type="radio" name="quartileSelection" id="Q3"> Quartile 3(Q3)&nbsp;
+                        <input type="radio" name="quartileSelection" id="Q4"> Quartile 4(Q4)&nbsp;
+                        <input type="radio" name="quartileSelection" id="nonImpactFactor"> Non Impact Factor&nbsp;
+                    </div>
+
+                    <div class="d-flex  mb-3 fontWg">
+                        <span id="index">Scopus Index: <span class="required">*</span> </span>
+                        <div id="indexItem" class="d-flex">
+                            <input type="radio" name="scopusIndex" id="s1" required>Yes &nbsp;
+                            <input type="radio" name="scopusIndex" id="s2" required>No &nbsp;
+
+                        </div>
+                    </div>
+
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="impactFactor" class="form-label fontWg">Last Known Impact Factor:</label>
+                                <input type="text" class="form-control" id="impactFactor"
+                                    placeholder="0.0">
+                            </div>
+                            
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="affiliation" class="form-label fontWg">NUML Affiliation Level:</label>
+                                <input type="text" class="form-control" id="affiliation"
+                                    placeholder="0">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="DOP" class="form-label fontWg">Date of Publication: <span class="required">*</span> </label>
+                                <input type="date" class="form-control" id="DOP" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="ISSN" class="form-label fontWg">ISSN Number: <span class="required">*</span> </label>
+                                <input type="number" class="form-control" id="ISSN" placeholder="0000-0000" required>
+                                    
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="url" class="form-label fontWg">URL</label>
+                        <input type="url" class="form-control" id="url">
+                    </div>
+
+                    <a  class="btn btn-dark btn-lg" role="button" ><i class="bi bi-newspaper"></i> View Paper</a>
+
+                   
+                    <div class="d-flex mb-4 align-items-start">
+                        <label class="mt-1 fontWg me-2" for="summary">Comments Summary: <span class="required">*</span></label>
+                        <div class="flex-grow-1">
+                            <textarea class="form-control w-100" placeholder="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci numquam assumenda corporis, quaerat debitis perspiciatis perferendis, sit mollitia quasi, necessitatibus veritatis dolore sed." id="summary"
+                                class="required" required></textarea>
+                        </div>
+                    </div>
+                   
+                    <div class="d-flex mt-3 align-items-start">
+                        <label class="mt-1 fontWg me-2" for="summary"> &nbsp; &nbsp;Your Comments :.... <span class="required">*</span></label>
+                        <div class="flex-grow-1">
+                            <textarea style="background: none;" class="form-control w-100" placeholder="Write comments here" id="summary"
+                                class="required" required></textarea>
+                        </div>
+                    </div>
+                    
+                  
+                    <div class="d-flex justify-content-center align-items-center mt-3 fontWg">
+                        <button class="btn btn-success me-2">Submit</button>
+                        <button class="btn btn-danger me-2">Not Approved</button>
+                        <button class="btn btn-info" style="color: white;">Sendback</button>
+                    </div>
+
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
